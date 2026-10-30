@@ -1,22 +1,23 @@
 {
   "schema": 1,
-  "updated": "2026-10-30T16:21:36Z",
+  "updated": "2026-10-30T16:48:42Z",
   "apps": [
     {
       "name": "MThread Store",
       "short": "Магазин моих приложений",
       "description": "Каталог приложений MThread: установка и обновление в одно нажатие.",
-      "changelog": "Первая версия",
+      "changelog": "Поиск с учётом раскладки и опечаток, категории, фильтры и сортировка\nНастройки автообновлений: Wi-Fi, зарядка, интервал, исключения, история\nНовый дизайн Material You с вкладками\nОтчёт о сбое при следующем запуске",
       "id": "app.mthread.store",
       "icon": "media/app.mthread.store/d7e8694540f9f643.png",
       "screenshots": [],
-      "sha256": "2aa52d37a870c099d07bec6a33fecfab5dda6cd18121da13d5ef6b6dc7c33f1e",
-      "size": 1504826,
-      "versionCode": 1,
-      "versionName": "1.0.0",
+      "sha256": "c521a3bb25f9fc5ba3c7284de1d546ed10ededd7c69fa4eece5780640d7082ab",
+      "size": 1775626,
+      "versionCode": 2,
+      "versionName": "1.1.0",
       "encrypted": false,
-      "url": "https://github.com/MAXAWER/mthread-store/releases/download/app.mthread.store/app.mthread.store-1.apk",
-      "updated": "2026-10-30T16:21:36Z"
+      "url": "https://github.com/MAXAWER/mthread-store/releases/download/app.mthread.store/app.mthread.store-2.apk",
+      "updated": "2026-10-30T16:48:42Z",
+      "category": "Инструменты"
     }
   ]
 }
