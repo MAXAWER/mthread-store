@@ -36,8 +36,28 @@
       "url" : "https://github.com/MAXAWER/mthread-store/releases/download/kz.smartcity.walk/kz.smartcity.walk-16.apk",
       "versionCode" : 16,
       "versionName" : "0.12.1"
+    },
+    {
+      "category" : "Разработка",
+      "changelog" : "Первая версия в MThread Store",
+      "description" : "Мобильная среда для работы с ИИ-агентом: проекты, чат с агентом и настройки в одном приложении.\n\n— Проекты: поиск по проектам и переписке, Git-ветки, создание и импорт проектов.\n— Чат с агентом: слэш-команды, упоминания файлов, планы с подтверждением, просмотр изменений с откатом в одно касание.\n— Прогресс задач прямо в шторке уведомлений (Live Updates на Android 16).\n— Встроенные подсистемы: Linux Ubuntu, локальные модели .gguf, просмотр Markdown, кода, HTML и медиа.\n",
+      "encrypted" : true,
+      "icon" : "media/ai.antigravity.mobile/d91bd88101b2e9b8.png",
+      "id" : "ai.antigravity.mobile",
+      "iv" : "94ba7166df6e9ecb6793f1042bfc281b",
+      "name" : "Antigravity",
+      "screenshots" : [
+
+      ],
+      "sha256" : "0de3c65d28b784091a555f0c0b5ce0cdc92d32663606dff6fd36e4aa66ffd122",
+      "short" : "ИИ-агент для проектов прямо в телефоне",
+      "size" : 300426778,
+      "updated" : "2026-11-23T05:40:35Z",
+      "url" : "https://github.com/MAXAWER/mthread-store/releases/download/ai.antigravity.mobile/ai.antigravity.mobile-5.apk.enc",
+      "versionCode" : 5,
+      "versionName" : "6.0.0-rog8"
     }
   ],
   "schema" : 1,
-  "updated" : "2026-11-23T05:35:00Z"
+  "updated" : "2026-11-23T05:40:35Z"
 }
