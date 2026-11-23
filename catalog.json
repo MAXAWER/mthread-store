@@ -56,8 +56,28 @@
       "url" : "https://github.com/MAXAWER/mthread-store/releases/download/ai.antigravity.mobile/ai.antigravity.mobile-5.apk.enc",
       "versionCode" : 5,
       "versionName" : "6.0.0-rog8"
+    },
+    {
+      "category" : "Разработка",
+      "changelog" : "Первая версия в MThread Store",
+      "description" : "Linux-ПК (Ubuntu) прямо в телефоне с официальным Claude Code внутри и удобным чатом.\n\nОткрываете приложение — и у вас под рукой полноценное рабочее окружение с терминалом и ИИ-агентом для работы с кодом. Только для личного использования.\n",
+      "encrypted" : true,
+      "icon" : "media/app.cladroid/f56d71702014551e.png",
+      "id" : "app.cladroid",
+      "iv" : "edc7f0a06dac3fb8029c333bab60fb1e",
+      "name" : "Cladroid",
+      "screenshots" : [
+
+      ],
+      "sha256" : "37829ae89ef5e67a87bdc6823e4156108eab0fa617b23dfafe11ed6720cdc60d",
+      "short" : "Linux и Claude Code в телефоне",
+      "size" : 1131499393,
+      "updated" : "2026-11-23T05:44:52Z",
+      "url" : "https://github.com/MAXAWER/mthread-store/releases/download/app.cladroid/app.cladroid-9.apk.enc",
+      "versionCode" : 9,
+      "versionName" : "0.7.0"
     }
   ],
   "schema" : 1,
-  "updated" : "2026-11-23T05:40:35Z"
+  "updated" : "2026-11-23T05:44:52Z"
 }
