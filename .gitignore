@@ -1,0 +1,13 @@
+store.properties
+local.properties
+.gradle/
+build/
+.idea/
+*.iml
+.DS_Store
+dist/
+mac/.build/
+*.app/
+__pycache__/
+admin/
+Store Admin.command

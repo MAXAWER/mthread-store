@@ -1,0 +1,4 @@
+-keepattributes *Annotation*, InnerClasses
+-keep,includedescriptorclasses class app.mthread.store.**$$serializer { *; }
+-keepclassmembers class app.mthread.store.** { *** Companion; }
+-keepclasseswithmembers class app.mthread.store.** { kotlinx.serialization.KSerializer serializer(...); }
