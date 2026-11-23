@@ -172,9 +172,9 @@ struct Publisher {
 
     /// Публичный репозиторий с пустым каталогом.
     static func setup(name: String, existingKey: String?) async throws -> StoreConfig {
-        let login = try await GitHub(repo: "").user()
+        let login = try await GitHub.client("").user()
         let repo = name.contains("/") ? name : "\(login)/\(name)"
-        let gh = try GitHub(repo: repo)
+        let gh = try await GitHub.client(repo)
         if try await !gh.repoExists(repo) {
             try await gh.createRepo(String(repo.split(separator: "/")[1]))
             try await Task.sleep(for: .seconds(2)) // GitHub не сразу готов к коммитам в новый репозиторий

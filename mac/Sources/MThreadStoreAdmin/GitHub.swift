@@ -6,12 +6,23 @@ final class GitHub {
     private let token: String
     private let session = URLSession(configuration: .ephemeral)
 
-    init(repo: String) throws {
+    private init(repo: String, token: String) {
         self.repo = repo
-        self.token = try GitHub.loadToken()
+        self.token = token
     }
 
-    static func loadToken() throws -> String {
+    @MainActor private static var cachedToken: String?
+
+    /// Клиент для репозитория. Токен читаем один раз и вне главного потока: ожидание `gh` на главном потоке
+    /// крутит цикл событий, и SwiftUI успевает перерисоваться посреди изменения состояния — админка падала.
+    @MainActor static func client(_ repo: String) async throws -> GitHub {
+        if let token = cachedToken { return GitHub(repo: repo, token: token) }
+        let token = try await Task.detached { try GitHub.loadToken() }.value
+        cachedToken = token
+        return GitHub(repo: repo, token: token)
+    }
+
+    nonisolated static func loadToken() throws -> String {
         let candidates = ["/usr/local/bin/gh", "/opt/homebrew/bin/gh", NSHomeDirectory() + "/.local/bin/gh", "/usr/bin/gh"]
         guard let gh = candidates.first(where: { FileManager.default.isExecutableFile(atPath: $0) }) else {
             throw fail("Не найден GitHub CLI (gh). Установите его и выполните в терминале: gh auth login")

@@ -32,3 +32,9 @@ mac/build-app.sh
 Новая версия должна иметь больший `versionCode` и ту же подпись. Лимит GitHub — 2 ГБ на APK.
 
 Админка работает с GitHub бережно: запросы идут по одному с паузами, при ограничениях GitHub она останавливается, а не повторяет запросы.
+
+Публикация из терминала тем же кодом и с теми же паузами:
+
+```bash
+"MThread Store Admin.app/Contents/MacOS/MThreadStoreAdmin" --publish app.apk --name "Название" --category "Категория" --encrypted --icon icon.png
+```

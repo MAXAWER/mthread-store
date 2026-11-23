@@ -55,7 +55,7 @@ final class AppModel {
         loading = true
         defer { loading = false }
         do {
-            catalog = try await GitHub(repo: config.repo).readCatalog()
+            catalog = try await GitHub.client(config.repo).readCatalog()
             loadError = nil
             if let id = selection, id != Self.newID, draft?.apk == nil, let app = catalog.apps.first(where: { $0.id == id }) {
                 draft = Draft(existing: app)
@@ -75,18 +75,21 @@ final class AppModel {
 
     func importAPK(_ url: URL) {
         guard url.pathExtension.lowercased() == "apk" else { return showError("Нужен файл .apk") }
-        do {
-            let info = try ApkFile.analyze(url)
-            guard let id = info.id else {
-                return showError(ApkFile.aapt2 == nil
-                    ? "Не найден aapt2 из Android SDK (build-tools) — без него APK не прочитать."
-                    : "Не удалось прочитать packageName из APK")
+        Task {
+            do {
+                // aapt2 и unzip — внешние процессы, ждём их не на главном потоке.
+                let info = try await Task.detached { try ApkFile.analyze(url) }.value
+                guard let id = info.id else {
+                    return showError(ApkFile.aapt2 == nil
+                        ? "Не найден aapt2 из Android SDK (build-tools) — без него APK не прочитать."
+                        : "Не удалось прочитать packageName из APK")
+                }
+                let existing = catalog.apps.first { $0.id == id }
+                draft = Draft(apk: info, id: id, existing: existing)
+                selection = existing?.id ?? Self.newID
+            } catch {
+                showError(error.localizedDescription)
             }
-            let existing = catalog.apps.first { $0.id == id }
-            draft = Draft(apk: info, id: id, existing: existing)
-            selection = existing?.id ?? Self.newID
-        } catch {
-            showError(error.localizedDescription)
         }
     }
 
@@ -147,7 +150,7 @@ final class AppModel {
         job = JobState(title: title)
         Task {
             do {
-                let publisher = Publisher(config: config, github: try GitHub(repo: config.repo)) { step, progress in
+                let publisher = Publisher(config: config, github: try await GitHub.client(config.repo)) { step, progress in
                     Task { @MainActor in
                         self.job?.step = step
                         self.job?.progress = progress

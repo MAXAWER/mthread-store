@@ -2,7 +2,6 @@ import AppKit
 import SwiftUI
 import UniformTypeIdentifiers
 
-@main
 struct MThreadStoreAdminApp: App {
     @State private var model = AppModel()
 
@@ -125,7 +124,9 @@ struct EditorView: View {
 
     var body: some View {
         @Bindable var model = model
-        if let draft = Binding($model.draft) {
+        // Не Binding($model.draft): если черновик обнулится, пока форма ещё на экране, такая привязка роняет SwiftUI.
+        if let current = model.draft {
+            let draft = Binding<Draft>(get: { model.draft ?? current }, set: { model.draft = $0 })
             Form {
                 Section {
                     HStack(alignment: .center, spacing: 16) {
