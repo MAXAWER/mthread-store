@@ -77,8 +77,27 @@
       "url" : "https://github.com/MAXAWER/mthread-store/releases/download/app.cladroid/app.cladroid-9.apk.enc",
       "versionCode" : 9,
       "versionName" : "0.7.0"
+    },
+    {
+      "category" : "Здоровье и спорт",
+      "changelog" : "Первая версия в MThread Store",
+      "description" : "Приложение для тренировок с напоминаниями.\n\nОписание можно дополнить в MThread Store Admin.\n",
+      "encrypted" : false,
+      "icon" : "media/com.tren.app/d54e219abd052a47.png",
+      "id" : "com.tren.app",
+      "name" : "Tren",
+      "screenshots" : [
+
+      ],
+      "sha256" : "3a230e586f20d70cc97d14e1517e972b2eb3c50cdb242d2044dc07e1bb5b3ec3",
+      "short" : "Тренировки и напоминания",
+      "size" : 4535369,
+      "updated" : "2026-11-23T06:12:09Z",
+      "url" : "https://github.com/MAXAWER/mthread-store/releases/download/com.tren.app/com.tren.app-20.apk",
+      "versionCode" : 20,
+      "versionName" : "1.19"
     }
   ],
   "schema" : 1,
-  "updated" : "2026-11-23T06:04:16Z"
+  "updated" : "2026-11-23T06:12:09Z"
 }
