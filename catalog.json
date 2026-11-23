@@ -1,23 +1,43 @@
 {
-  "schema": 1,
-  "updated": "2026-10-30T17:03:30Z",
-  "apps": [
+  "apps" : [
     {
-      "name": "MThread Store",
-      "short": "Магазин моих приложений",
-      "description": "Каталог приложений MThread: установка и обновление в одно нажатие.",
-      "changelog": "Исправлен вылет при запуске\nПоиск с учётом раскладки и опечаток, категории, фильтры и сортировка\nНастройки автообновлений: Wi-Fi, зарядка, интервал, исключения, история\nНовый дизайн Material You с вкладками\nОтчёт о сбое при следующем запуске",
-      "id": "app.mthread.store",
-      "icon": "media/app.mthread.store/d7e8694540f9f643.png",
-      "screenshots": [],
-      "sha256": "999ebc146717a2498004a3f90586771dfd105b28d3342568d644deb2dbc7d7d0",
-      "size": 13829213,
-      "versionCode": 3,
-      "versionName": "1.1.1",
-      "encrypted": false,
-      "url": "https://github.com/MAXAWER/mthread-store/releases/download/app.mthread.store/app.mthread.store-3.apk",
-      "updated": "2026-10-30T17:03:30Z",
-      "category": "Инструменты"
+      "category" : "Инструменты",
+      "changelog" : "Исправлен вылет при запуске\nПоиск с учётом раскладки и опечаток, категории, фильтры и сортировка\nНастройки автообновлений: Wi-Fi, зарядка, интервал, исключения, история\nНовый дизайн Material You с вкладками\nОтчёт о сбое при следующем запуске",
+      "description" : "Каталог приложений MThread: установка и обновление в одно нажатие.",
+      "encrypted" : false,
+      "icon" : "media/app.mthread.store/d7e8694540f9f643.png",
+      "id" : "app.mthread.store",
+      "name" : "MThread Store",
+      "screenshots" : [
+
+      ],
+      "sha256" : "999ebc146717a2498004a3f90586771dfd105b28d3342568d644deb2dbc7d7d0",
+      "short" : "Магазин моих приложений",
+      "size" : 13829213,
+      "updated" : "2026-10-30T17:03:30Z",
+      "url" : "https://github.com/MAXAWER/mthread-store/releases/download/app.mthread.store/app.mthread.store-3.apk",
+      "versionCode" : 3,
+      "versionName" : "1.1.1"
+    },
+    {
+      "category" : "Инструменты",
+      "changelog" : "",
+      "description" : "",
+      "encrypted" : false,
+      "id" : "kz.smartcity.walk",
+      "name" : "MThread Jol",
+      "screenshots" : [
+
+      ],
+      "sha256" : "067f7cf5c0a96521a74fa47398934d1e082c2612c2eb57ce11077fdaca79a02a",
+      "short" : "",
+      "size" : 3492887,
+      "updated" : "2026-11-23T05:35:00Z",
+      "url" : "https://github.com/MAXAWER/mthread-store/releases/download/kz.smartcity.walk/kz.smartcity.walk-16.apk",
+      "versionCode" : 16,
+      "versionName" : "0.12.1"
     }
-  ]
+  ],
+  "schema" : 1,
+  "updated" : "2026-11-23T05:35:00Z"
 }
