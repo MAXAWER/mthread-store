@@ -120,8 +120,48 @@
       "url": "https://github.com/MAXAWER/mthread-store/releases/download/kz.mthread.silent/kz.mthread.silent-14.apk",
       "versionCode": 14,
       "versionName": "1.0.0"
+    },
+    {
+      "category": "Графика",
+      "changelog": "Первая версия: модель обучена на видеокарте (32 минуты)",
+      "description": "Весь экран генерирует нейросеть: по прошлому кадру и касаниям пальца она рисует следующий кадр. Настоящего приложения внутри нет — только сеть (~170 тыс. параметров) на процессоре телефона.\n8 цветов, 3 размера кисти, ластик, очистка холста.",
+      "encrypted": false,
+      "icon": "media/kz.mthread.neuralpaint/dc8270b59275a763.png",
+      "id": "kz.mthread.neuralpaint",
+      "name": "NeuralPaint",
+      "screenshots": [
+        "media/kz.mthread.neuralpaint/9730849009aa2bc6.png",
+        "media/kz.mthread.neuralpaint/e8592b92099a3c87.png"
+      ],
+      "sha256": "8d2b3d90e2634122d83aa17e3fac1074033aa273f2e58ba111d654944986eca3",
+      "short": "Рисовалка, каждый кадр которой рисует нейросеть",
+      "size": 812753,
+      "updated": "2026-11-25T13:12:06Z",
+      "url": "https://github.com/MAXAWER/mthread-store/releases/download/kz.mthread.neuralpaint/kz.mthread.neuralpaint-1.apk",
+      "versionCode": 1,
+      "versionName": "1.0"
+    },
+    {
+      "category": "Графика",
+      "changelog": "Ранняя версия 0.1: интерфейс, фото из галереи, сохранение; модель недообучена",
+      "description": "Полноцветный графический редактор, каждый кадр которого рисует нейросеть: тёмный дизайн, 16 цветов, кисть, маркер, ластик, 4 размера, фото из галереи, фильтры (ч/б, инверсия, светлее, темнее, сепия, размытие), сохранение в галерею.\nРанняя версия: сеть обучена всего 15 минут — пока рисует бледными линиями вместо выбранного цвета, фильтры не работают. Загрузка фото работает.",
+      "encrypted": false,
+      "icon": "media/kz.mthread.neuralpaintpro/d3320be102d81a40.png",
+      "id": "kz.mthread.neuralpaintpro",
+      "name": "NeuralPaint Pro",
+      "screenshots": [
+        "media/kz.mthread.neuralpaintpro/104cf8a029c087b9.png",
+        "media/kz.mthread.neuralpaintpro/fe05b6878bbdf3d7.png"
+      ],
+      "sha256": "d3f4a3a973e1d7f689db0143b46f041beaec71a1918f52b676bace7c61951383",
+      "short": "Полноцветный редактор, который целиком рисует нейросеть",
+      "size": 2798749,
+      "updated": "2026-11-25T13:12:06Z",
+      "url": "https://github.com/MAXAWER/mthread-store/releases/download/kz.mthread.neuralpaintpro/kz.mthread.neuralpaintpro-1.apk",
+      "versionCode": 1,
+      "versionName": "0.1"
     }
   ],
   "schema": 1,
-  "updated": "2026-11-24T18:07:22Z"
+  "updated": "2026-11-25T13:12:06Z"
 }
